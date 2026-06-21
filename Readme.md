@@ -12,6 +12,8 @@ Menú Master  permite buscar recetas usando una API externa, consultar detalles 
 - Consulta de detalles de receta.
 - Visualizacion de ingredientes.
 - Visualizacion de instrucciones.
+- Traducción automática de recetas mediante API externa.
+- Internacionalización dinámica del contenido (multi-idioma).
 - Receta aleatoria.
 - Gestión de favoritos.
 - Planificación semanal.
@@ -47,5 +49,21 @@ app-recetas-js/
 │   ├── storage.js
 │   ├── ui.js
 │   └── app.js
+│   └──translations.js
+│   |── tranlator.js
 └── README.md
 
+## 🌐 Traducción e internacionalización
+
+La aplicación incorpora un sistema de traducción dinámica que permite convertir automáticamente el contenido proveniente de la API (TheMealDB) del inglés a otros idiomas utilizando una API de traducción externa.
+
+Esto incluye:
+
+- Traducción de instrucciones de recetas.
+- Traducción de ingredientes en tiempo real.
+- Soporte para múltiples idiomas.
+
+Tecnologías utilizadas:
+
+- API externa de traducción (LibreTranslate).
+- JavaScript (fetch, Promises).
