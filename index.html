@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Menú Master | App de Recetas</title>
+
+<link rel="stylesheet" href="./css/styles.css" />
+</head>
+<body>
+  <header class="hero">
+    <nav class="navbar">
+      <h1>Menú Master</h1>
+      <span>Recetas, favoritos y planificación semanal</span>
+    </nav>
+
+    <section class="hero-content">
+      <div>
+        <p class="eyebrow">Proyecto JavaScript intermedio</p>
+        <h2>Busca recetas y organiza tu semana</h2>
+        <p>
+          Encuentra recetas, guárdalas como favoritas y planifica tus comidas
+          de lunes a domingo.
+        </p>
+      </div>
+
+      <form id="search-form" class="search-form">
+        <input
+          type="text"
+          id="search-input"
+          placeholder="Buscar receta, ejemplo: chicken, pasta, rice..."
+          required
+        />
+        <button type="submit">Buscar</button>
+      </form>
+    </section>
+  </header>
+
+  <main class="container">
+    <section class="panel">
+      <div class="section-title">
+        <div>
+          <p class="eyebrow">Resultados</p>
+          <h2>Recetas encontradas</h2>
+        </div>
+        <button id="random-button" class="btn-secondary">
+          Receta aleatoria
+        </button>
+      </div>
+
+      <p id="status-message" class="status-message">
+        Busca una receta para comenzar.
+      </p>
+
+      <div id="recipes-grid" class="recipes-grid"></div>
+    </section>
+
+    <section class="layout-grid">
+      <section class="panel">
+        <div class="section-title">
+          <div>
+            <p class="eyebrow">Favoritos</p>
+            <h2>Mis recetas favoritas</h2>
+          </div>
+        </div>
+
+        <div id="favorites-list" class="compact-list"></div>
+      </section>
+
+      <section class="panel">
+        <div class="section-title">
+          <div>
+            <p class="eyebrow">Plan semanal</p>
+            <h2>Planificador de comidas</h2>
+          </div>
+        </div>
+
+        <form id="planner-form" class="planner-form">
+          <select id="planner-recipe" required>
+            <option value="">Selecciona una receta favorita</option>
+          </select>
+
+          <select id="planner-day" required>
+            <option value="monday">Lunes</option>
+            <option value="tuesday">Martes</option>
+            <option value="wednesday">Miércoles</option>
+            <option value="thursday">Jueves</option>
+            <option value="friday">Viernes</option>
+            <option value="saturday">Sábado</option>
+            <option value="sunday">Domingo</option>
+          </select>
+
+          <select id="planner-meal" required>
+            <option value="breakfast">Desayuno</option>
+            <option value="lunch">Almuerzo</option>
+            <option value="dinner">Cena</option>
+          </select>
+
+          <button type="submit">Añadir al plan</button>
+        </form>
+
+        <div id="weekly-plan" class="weekly-plan"></div>
+      </section>
+    </section>
+  </main>
+
+  <section id="recipe-modal" class="modal hidden">
+    <article class="modal-content">
+      <button id="close-modal" class="close-modal">×</button>
+      <div id="modal-body"></div>
+    </article>
+  </section>
+
+  <script type="module" src="./js/app.js"></script>
+</body>
+</html>
